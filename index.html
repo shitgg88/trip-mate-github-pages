@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#165dff"><title>旅伴 Trip Mate</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div><small>九州 7 天 6 夜</small><h1>旅伴</h1></div><button id="syncBtn" class="ghost">同步資料</button></header>
+<main>
+  <section class="overview"><div><span>距離出發</span><strong id="countdown">—</strong></div><div><span>行李完成</span><strong id="packingProgress">0%</strong></div><div><span>團體支出</span><strong id="totalExpense">¥0</strong></div></section>
+  <nav><button data-tab="schedule" class="active">行程</button><button data-tab="packing">行李</button><button data-tab="transport">交通</button><button data-tab="expense">記帳</button></nav>
+  <section id="schedule" class="tab active"><div class="section-head"><div><p>TRIP PLAN</p><h2>行程安排</h2></div><button data-add="schedule">＋ 新增</button></div><div id="scheduleList" class="timeline"></div></section>
+  <section id="packing" class="tab"><div class="section-head"><div><p>PACKING</p><h2>行李清單</h2></div><button data-add="packing">＋ 新增</button></div><div id="packingFilters" class="chips"></div><div id="packingList"></div></section>
+  <section id="transport" class="tab"><div class="section-head"><div><p>TRANSPORT</p><h2>航班與交通</h2></div><button data-add="transport">＋ 新增</button></div><div id="transportList" class="cards"></div></section>
+  <section id="expense" class="tab"><div class="section-head"><div><p>EXPENSES</p><h2>共同記帳</h2></div><button data-add="expense">＋ 記一筆</button></div><div id="expenseSummary"></div><div id="expenseList"></div></section>
+</main>
+<dialog id="editor"><form method="dialog"><div class="modal-head"><h2 id="modalTitle">新增</h2><button value="cancel" class="icon">×</button></div><div id="formFields"></div><div class="actions"><button value="cancel" class="secondary">取消</button><button id="saveBtn" value="default">儲存</button></div></form></dialog>
+<div id="toast"></div><script src="config.js"></script><script src="app.js"></script></body></html>
